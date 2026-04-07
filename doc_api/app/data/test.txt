@@ -1,0 +1,13 @@
+INTERVIEW BOOKING GUIDELINES
+
+To schedule an interview, please provide the following information:
+- Full Name
+- Email Address
+- Preferred Date (YYYY-MM-DD format)
+- Preferred Time (HH:MM format)
+
+Our interviews are conducted on weekdays from 9:00 AM to 5:00 PM.
+Interview duration is typically 30-45 minutes.
+
+Please note that all candidates must provide valid contact information.
+Confirmation will be sent to the provided email address.
