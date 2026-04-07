@@ -14,6 +14,9 @@ venv/
 .env.local
 .env.*.local
 
+# Documentation (keep local only)
+README.md
+
 # IDE
 .vscode/
 .idea/
