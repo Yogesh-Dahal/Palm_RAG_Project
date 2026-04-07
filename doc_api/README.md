@@ -1,36 +1,36 @@
-# 🧠 Document Processing & Conversational RAG API
+# Document Processing & Conversational RAG API
 
 A production-ready backend system implementing document ingestion and a custom conversational RAG pipeline, built using **FastAPI**, **LangGraph**, **LLMs**, **Pinecone**, **Redis**, and **PostgreSQL**.
 
 This project satisfies all requirements specified by Palm Mind Technology and follows clean, modular, and scalable backend architecture.
 
-## 🚀 Features
+## Features
 
 ### 1. Document Ingestion API
-- ✅ Upload `.pdf` and `.txt` files
-- ✅ Text extraction and processing
-- ✅ Two selectable chunking strategies:
+- Upload `.pdf` and `.txt` files
+- Text extraction and processing
+- Two selectable chunking strategies:
   - **Fixed-size chunking** - Splits documents into fixed chunks
   - **Semantic chunking** - Intelligent content-based splitting
-- ✅ Embedding generation using `all-MiniLM-L6-v2` model
-- ✅ Vector storage in **Pinecone**
-- ✅ Metadata persistence in **PostgreSQL**
+- Embedding generation using `all-MiniLM-L6-v2` model
+- Vector storage in **Pinecone**
+- Metadata persistence in **PostgreSQL**
 
 ### 2. Conversational RAG API
-- ✅ **Custom RAG implementation** (no RetrievalQAChain)
-- ✅ Manual retrieval + context injection
-- ✅ Multi-turn conversation handling
-- ✅ **Redis-based chat memory** with session support
-- ✅ LLM-driven response generation with context awareness
-- ✅ Intent-based routing via LangGraph
+- **Custom RAG implementation** (no RetrievalQAChain)
+- Manual retrieval + context injection
+- Multi-turn conversation handling
+- **Redis-based chat memory** with session support
+- LLM-driven response generation with context awareness
+- Intent-based routing via LangGraph
 
 ### 3. Interview Booking via LLM
-- ✅ LLM detects booking intent from natural language
-- ✅ Extracts structured data: **Name**, **Email**, **Date**, **Time**
-- ✅ Stores booking information in **PostgreSQL**
-- ✅ Seamlessly integrated into conversation flow
+- LLM detects booking intent from natural language
+- Extracts structured data: **Name**, **Email**, **Date**, **Time**
+- Stores booking information in **PostgreSQL**
+- Seamlessly integrated into conversation flow
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 User Request
@@ -53,7 +53,7 @@ LangGraph Workflow
 Return Response + Update Memory
 ```
 
-## 💻 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -68,7 +68,7 @@ Return Response + Update Memory
 | File Parsing | PyPDF2 |
 | Validation | Pydantic |
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 doc_api/
@@ -105,17 +105,17 @@ doc_api/
 └── README.md                      # Documentation
 ```
 
-## 🔒 Constraints Compliance
+## Constraints Compliance
 
-- ✅ No FAISS
-- ✅ No Chroma
-- ✅ No UI (Backend only)
-- ✅ No RetrievalQAChain (custom implementation)
-- ✅ Clean modular architecture
-- ✅ Typed Python + Pydantic
-- ✅ Industry-standard REST API structure
+- No FAISS
+- No Chroma
+- No UI (Backend only)
+- No RetrievalQAChain (custom implementation)
+- Clean modular architecture
+- Typed Python + Pydantic
+- Industry-standard REST API structure
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### 1. Clone Repository
 ```bash
@@ -165,7 +165,7 @@ uvicorn main:app --reload
 
 Server will be available at: **http://127.0.0.1:8000**
 
-## 📚 API Endpoints
+## API Endpoints
 
 ### Document Chunking
 
@@ -229,7 +229,7 @@ Response (Booking):
 }
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Swagger UI
 Visit: **http://127.0.0.1:8000/docs**
@@ -275,7 +275,7 @@ POST /chat
 }
 ```
 
-## 🧠 Custom RAG Flow
+## Custom RAG Flow
 
 1. **User Query** → FastAPI endpoint receives request
 2. **Classify Intent** → LangGraph intent node determines QA or Booking
@@ -287,7 +287,7 @@ POST /chat
 8. **Save to Memory** → Store user query and response in Redis
 9. **Return Response** → Send answer or booking confirmation
 
-## 📊 Database Schema
+## Database Schema
 
 ### Metadata Table (Documents)
 ```sql
@@ -314,7 +314,7 @@ CREATE TABLE datas.booking (
 );
 ```
 
-## 🔄 Multi-turn Conversation Example
+## Multi-turn Conversation Example
 
 **Turn 1:**
 ```json
@@ -338,7 +338,7 @@ POST /chat
 
 Redis stores all messages with session context.
 
-## 📌 Future Enhancements
+## Future Enhancements
 
 - Role-based access control (RBAC)
 - Document versioning and history
@@ -347,6 +347,6 @@ Redis stores all messages with session context.
 - Rate limiting and authentication
 - Batch document processing
 
-## 👤 Author
+## Author
 
 **Yogesh Dahal**
